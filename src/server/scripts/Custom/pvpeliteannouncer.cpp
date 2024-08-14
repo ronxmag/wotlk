@@ -5,7 +5,7 @@ Refactored by JAGPH TeaM
 #include "Player.h"
 #include "Creature.h"
 #include "World.h"
-#include <botmgr.cpp>
+
 
 class pvpelite_announcer : public PlayerScript
 {
@@ -14,7 +14,7 @@ public:
 
     void OnPlayerKilledByCreature(Creature* killer, Player* killed)
     {
-        if (sConfigMgr->GetBoolDefault("KilledByCreature.Announcer", true))
+        if (sConfigMgr->GetOption("KilledByCreature.Announcer", true))
         {
             if (killer->isElite())
             {
@@ -62,7 +62,7 @@ public:
 
     void OnPVPKill(Player* killer, Player* killed)
     {
-        if (sConfigMgr->GetBoolDefault("PvPKill.Announcer", true))
+        if (sConfigMgr->GetOption("PvPKill.Announcer", true))
         {
             if (killer->IsPlayer())
             {
