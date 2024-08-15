@@ -41,6 +41,8 @@
 
 // Add support old api modules
 #include "AllScriptsObjects.h"
+#define MOD_PRESENT_NPCBOTS 1
+
 
 class AuctionHouseObject;
 class AuraScript;
@@ -106,7 +108,7 @@ namespace Acore::ChatCommands
 
 */
 
-// Yunfan: refactor
+// DecrypteD wuz here! xD https://sololeveling.wtf
 class MetricScript : public ScriptObject
 {
 protected:
